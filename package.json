@@ -1,52 +1,52 @@
 {
-  "name": "@derfrodo/frodo-s-little-helpers",
-  "version": "0.1.11",
-  "description": "Small Helper classes which I tend to create over and over again otherwise. Some of them may actually work even inside browser javascript. Some of them do not. ;)",
-  "main": "dist/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/derfrodo/frodo-s-little-helpers"
-  },
-  "scripts": {
-      "prepareForPublish": "npm run build && npm install --production && npm run cleanForPublish",
-      "test": "jest",
-      "cleanForPublish": "node cleanForPublish.js",
-      "clean": "npm ci && node clean.js",
-      "prebuild": "npm run clean",
-      "build": "tsc --project tsconfig.build.json ",
-      "prestart": "npm run clean",
-      "start": "tsc -w",
-      "lint": "tsc -p tsconfig.test.json --noEmit && eslint */**/*.{js,ts,tsx} --quiet --fix",
-      "prepublish:beta": "npm run prepareForPublish",
-      "prepublish:public": "npm run prepareForPublish",
-      "publish:beta": "npm publish --access public --tag beta",
-      "publish:public": "npm publish --access public"
-  },
-  "private": false,
-  "author": "Stefan Pauka",
-  "license": "MIT",
-  "dependencies": {
-      "fs-extra": "^9.0.0",
-      "guid-typescript": "^1.0.9",
-      "loglevel": "^1.6.8"
-  },
-  "devDependencies": {
-      "@babel/core": "*",
-      "@babel/plugin-proposal-class-properties": "^7.8.3",
-      "@babel/plugin-proposal-decorators": "^7.8.3",
-      "@babel/preset-env": "*",
-      "@babel/preset-react": "*",
-      "@babel/preset-typescript": "*",
-      "@types/fs-extra": "^8.1.0",
-      "@types/jest": "^25.2.1",
-      "@typescript-eslint/eslint-plugin": "^2.26.0",
-      "@typescript-eslint/parser": "^2.26.0",
-      "babel-jest": "*",
-      "eslint": "^6.8.0",
-      "eslint-config-prettier": "^6.10.1",
-      "eslint-plugin-prettier": "^3.1.2",
-      "jest": "*",
-      "prettier": "^2.0.2",
-      "typescript": "^3.8.3"
-  }
+    "name": "@derfrodo/frodo-s-little-helpers",
+    "version": "0.1.10",
+    "description": "Small Helper classes which I tend to create over and over again otherwise. Some of them may actually work even inside browser javascript. Some of them do not. ;)",
+    "main": "dist/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/derfrodo/frodo-s-little-helpers"
+    },
+    "scripts": {
+        "prepareForPublish": "npm run build && npm install --production && npm run cleanForPublish",
+        "test": "jest",
+        "cleanForPublish": "node cleanForPublish.js",
+        "clean": "npm ci && node clean.js",
+        "prebuild": "npm run clean",
+        "build": "tsc --project tsconfig.build.json ",
+        "prestart": "npm run clean",
+        "start": "tsc -w",
+        "lint": "tsc -p tsconfig.test.json --noEmit && eslint */**/*.{js,ts,tsx} --quiet --fix",
+        "prepublish:beta": "npm run prepareForPublish",
+        "prepublish:public": "npm run prepareForPublish",
+        "publish:beta": "npm publish --access public --tag beta",
+        "publish:public": "npm publish --access public"
+    },
+    "private": false,
+    "author": "Stefan Pauka",
+    "license": "MIT",
+    "dependencies": {
+        "fs-extra": "^9.0.0",
+        "guid-typescript": "^1.0.9",
+        "loglevel": "^1.6.8"
+    },
+    "devDependencies": {
+        "@babel/core": "*",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-proposal-decorators": "^7.8.3",
+        "@babel/preset-env": "*",
+        "@babel/preset-react": "*",
+        "@babel/preset-typescript": "*",
+        "@types/fs-extra": "^8.1.0",
+        "@types/jest": "^25.2.1",
+        "@typescript-eslint/eslint-plugin": "^2.26.0",
+        "@typescript-eslint/parser": "^2.26.0",
+        "babel-jest": "*",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.10.1",
+        "eslint-plugin-prettier": "^3.1.2",
+        "jest": "*",
+        "prettier": "^2.0.2",
+        "typescript": "^3.8.3"
+    }
 }

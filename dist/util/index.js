@@ -5,6 +5,10 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./BindThis"));
 __export(require("./BindFunctional"));
+var ArrayHelper_1 = require("./ArrayHelper");
+exports.ArrayHelper = ArrayHelper_1.ArrayHelper;
+var ProcessHelper_1 = require("./ProcessHelper");
+exports.ProcessHelper = ProcessHelper_1.ProcessHelper;
 var ObjectHelper_1 = require("./ObjectHelper");
 exports.ObjectHelper = ObjectHelper_1.ObjectHelper;
 var StringHelper_1 = require("./StringHelper");

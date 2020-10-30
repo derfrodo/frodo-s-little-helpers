@@ -134,19 +134,36 @@ var StringHelper = /** @class */ (function () {
         if (camelCasedString.indexOf("_") >= 0) {
             throw new Error('Failed to transform to PascalCased (yet...). Parameter must not contain "_"');
         }
-        // return camelCasedString.replace(/(?<=^)[a-z]{1}/, (mtch) =>
-        return camelCasedString.replace(/(?:^)[a-z]{1}/, function (mtch) {
-            return mtch.toUpperCase();
-        });
+        return camelCasedString.length === 0
+            ? camelCasedString
+            : "" + camelCasedString.substring(0, 1).toUpperCase() + (camelCasedString.length > 1
+                ? camelCasedString.substring(1)
+                : "");
+        // this return was used in the last patch version,
+        // but had lead to some issues with safari and firefox browsers due to
+        // the group elements within the regex pattern
+        // return camelCasedString.replace(/(?:^)[a-z]{1}/, (mtch) =>
+        //     mtch.toUpperCase()
+        // );
     };
     StringHelper.prototype.toCamelCased = function (PascalCasedString) {
+        if (typeof PascalCasedString !== "string") {
+            return PascalCasedString;
+        }
         if (PascalCasedString.indexOf("_") >= 0) {
             throw new Error('Failed to transform to camelCased (yet...). Parameter must not contain "_"');
         }
-        // return PascalCasedString.replace(/(?<=^)[A-Z]{1}/g, (mtch) =>
-        return PascalCasedString.replace(/(?:^)[A-Z]{1}/g, function (mtch) {
-            return mtch.toLowerCase();
-        });
+        return PascalCasedString.length === 0
+            ? PascalCasedString
+            : "" + PascalCasedString.substring(0, 1).toLowerCase() + (PascalCasedString.length > 1
+                ? PascalCasedString.substring(1)
+                : "");
+        // this return was used in the last patch version,
+        // but had lead to some issues with safari and firefox browsers due to
+        // the group elements within the regex pattern
+        // return PascalCasedString.replace(/(?:^)[A-Z]{1}/g, (mtch) =>
+        //     mtch.toLowerCase()
+        // );
     };
     StringHelper.prototype.createGuid = function () {
         return guid_typescript_1.Guid.create().toString();
