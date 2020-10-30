@@ -2,7 +2,7 @@
 Just a bunch of helpfull stuff (hopefully ;) )
 ## Installation
 ```
-npm install --save-dev @derfrodo/reducer-gen
+npm install --save-dev @derfrodo/frodo-s-little-helpers
 ```
 
 
