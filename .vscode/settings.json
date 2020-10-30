@@ -1,0 +1,5 @@
+{
+    "jest.pathToJest": "node_modules/.bin/jest",
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "jest.enableInlineErrorMessages": true
+}
