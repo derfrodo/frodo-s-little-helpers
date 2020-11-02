@@ -1,6 +1,6 @@
 {
     "name": "@derfrodo/frodo-s-little-helpers",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "description": "Small Helper classes which I tend to create over and over again otherwise. Some of them may actually work even inside browser javascript. Some of them do not. ;)",
     "main": "dist/",
     "repository": {
